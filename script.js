@@ -48,3 +48,6 @@ const perishableProduct2 = new PerishableProductProperties('milk', 5, 25, '2024-
 console.log(perishableProduct1.toString());
 console.log(perishableProduct2.toString());
 
+const productArray1 = [product, perishableProduct1, perishableProduct2];
+
+ProductProperties.applyDiscount(productArray1, 0.1);
