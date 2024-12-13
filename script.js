@@ -94,5 +94,8 @@ store.addProduct(brownies);
 store.addProduct(orangeJuice);
 // console log of prior to 15% discount
 console.log('Total Inventory Value before applying 15% discount: $', store.getInventoryValue());
-
+// applying 15% discount
+ProductProperties.applyDiscount(store.inventory, 0.15);
+// log to print 15% discount
+console.log('Total Inventory Value after applying 15% discount: $', store.getInventoryValue());
 
