@@ -16,13 +16,13 @@ class ProductProperties {
         
     }
 }
-
+// subclass
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
-    super(name, price, quantity);
+    super(name, price, quantity); // inherits constructor from main class
     this.expirationDate = expirationDate;
     }
-
+    // modified toString to include expiration date
     toString() {
         return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
 
@@ -34,6 +34,7 @@ const product = new ProductProperties('apple', 2.5, 50);
 console.log(product.getTotalValue());
 console.log(product.toString());
 
+// test to check if subclass and method override works correctly
 const perishableProduct1 = new PerishableProductProperties('apple', 2.5, 50, '2024-12-31');
 const perishableProduct2 = new PerishableProductProperties('milk', 5, 25, '2024-12-20');
 console.log(perishableProduct1.toString());
