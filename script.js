@@ -1,4 +1,12 @@
 class ProductProperties {
+
+static applyDiscount(products, discount) {
+    products.forEach(product => {
+        product.price = product.price - (product.price * discount);
+    
+    });
+}
+
     // constructs the base class
     constructor(name, price, quantity) { 
         this.name = name;
