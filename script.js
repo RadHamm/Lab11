@@ -36,7 +36,7 @@ class PerishableProductProperties extends ProductProperties {
 
     }
 }
-
+/*
 // Test to check if product properties class and methods work correctly.
 const product = new ProductProperties('apple', 2.5, 50);
 console.log(product.getTotalValue());
@@ -49,6 +49,7 @@ console.log(perishableProduct1.toString());
 console.log(perishableProduct2.toString());
 // test to check if array works with static discount correctly
 const productArray1 = [product, perishableProduct1, perishableProduct2];
+*/
 // cycles through array, does calculation for each object and logs it
 ProductProperties.applyDiscount(productArray1, 0.1);
 productArray1.forEach(product => {
@@ -74,3 +75,9 @@ class Store {
         return this.inventory.find(product => product.name === name) || null;
     }
 }
+// creating 5 products
+const apple = new PerishableProductProperties('Apple', 2, 50, 'Dec 20th');
+const pop = new ProductProperties('MtnDew', 3, 40);
+const energyDrink = new ProductProperties('Monster', 4, 30);
+const brownies = new PerishableProductProperties('Brownies', 2.5, 60, 'Dec-18th');
+const orangeJuice = new PerishableProductProperties('Orange Juice', 5, 15, 'Dec-25');
