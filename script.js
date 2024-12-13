@@ -1,11 +1,11 @@
 class ProductProperties {
 // static method for product class
-static applyDiscount(products, discount) {
-    products.forEach(product => {
-        product.price = product.price - (product.price * discount);
+    static applyDiscount(products, discount) {
+        products.forEach(product => {
+          product.price = product.price - (product.price * discount);
     
-    });
-}
+         });  
+    }
 
     // constructs the base class
     constructor(name, price, quantity) { 
@@ -27,8 +27,8 @@ static applyDiscount(products, discount) {
 // subclass
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
-    super(name, price, quantity); // inherits constructor from main class
-    this.expirationDate = expirationDate;
+        super(name, price, quantity); // inherits constructor from main class
+        this.expirationDate = expirationDate;
     }
     // modified toString to include expiration date
     toString() {
@@ -54,7 +54,7 @@ const productArray1 = [product, perishableProduct1, perishableProduct2];
 // cycles through array, does calculation for each object and logs it
 ProductProperties.applyDiscount(productArray1, 0.1);
 productArray1.forEach(product => {
-    //console.log(product.toString());
+    //console.log(product.toString()); // test log
     
 });
 // store class
@@ -87,17 +87,22 @@ const orangeJuice = new PerishableProductProperties('Orange Juice', 5, 15, 'Dec-
 // create store object and add products to store.
 const store = new Store();
 
+// add products to store object
 store.addProduct(apple);
 store.addProduct(pop);
 store.addProduct(energyDrink);
 store.addProduct(brownies);
 store.addProduct(orangeJuice);
+
 // console log of prior to 15% discount
 console.log('Total Inventory Value before applying 15% discount: $', store.getInventoryValue());
+
 // applying 15% discount
 ProductProperties.applyDiscount(store.inventory, 0.15);
+
 // log to print 15% discount
 console.log('Total Inventory Value after applying 15% discount: $', store.getInventoryValue());
+
 // findproduct method to search for a specific product by name.
 const productName = 'Monster';
 const foundProduct = store.findProductByName(productName);
