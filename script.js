@@ -69,5 +69,8 @@ class Store {
     getInventoryValue() {
         return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
     }
-
+// method to find product by name or return null
+    findProductByName(name) {
+        return this.inventory.find(product => product.name === name) || null;
+    }
 }
