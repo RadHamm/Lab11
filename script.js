@@ -55,3 +55,11 @@ productArray1.forEach(product => {
     console.log(product.toString());
     
 });
+// store class
+class Store {
+    // constructor to initalize inventory as empty array
+    constructor() {
+        this.inventory = [];
+    }
+
+}
