@@ -1,5 +1,5 @@
 class ProductProperties {
-
+// static method for product class
 static applyDiscount(products, discount) {
     products.forEach(product => {
         product.price = product.price - (product.price * discount);
@@ -47,7 +47,11 @@ const perishableProduct1 = new PerishableProductProperties('apple', 2.5, 50, '20
 const perishableProduct2 = new PerishableProductProperties('milk', 5, 25, '2024-12-20');
 console.log(perishableProduct1.toString());
 console.log(perishableProduct2.toString());
-
+// test to check if array works with static discount correctly
 const productArray1 = [product, perishableProduct1, perishableProduct2];
-
+// cycles through array, does calculation for each object and logs it
 ProductProperties.applyDiscount(productArray1, 0.1);
+productArray1.forEach(product => {
+    console.log(product.toString());
+    
+});
