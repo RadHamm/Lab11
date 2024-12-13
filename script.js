@@ -36,24 +36,25 @@ class PerishableProductProperties extends ProductProperties {
 
     }
 }
-/*
+
 // Test to check if product properties class and methods work correctly.
 const product = new ProductProperties('apple', 2.5, 50);
-console.log(product.getTotalValue());
-console.log(product.toString());
+//console.log(product.getTotalValue());
+//console.log(product.toString());
 
 // test to check if subclass and method override works correctly
 const perishableProduct1 = new PerishableProductProperties('apple', 2.5, 50, '2024-12-31');
 const perishableProduct2 = new PerishableProductProperties('milk', 5, 25, '2024-12-20');
-console.log(perishableProduct1.toString());
-console.log(perishableProduct2.toString());
+//console.log(perishableProduct1.toString());
+//console.log(perishableProduct2.toString());
 // test to check if array works with static discount correctly
+
 const productArray1 = [product, perishableProduct1, perishableProduct2];
-*/
+
 // cycles through array, does calculation for each object and logs it
 ProductProperties.applyDiscount(productArray1, 0.1);
 productArray1.forEach(product => {
-    console.log(product.toString());
+    //console.log(product.toString());
     
 });
 // store class
@@ -91,3 +92,7 @@ store.addProduct(pop);
 store.addProduct(energyDrink);
 store.addProduct(brownies);
 store.addProduct(orangeJuice);
+// console log of prior to 15% discount
+console.log('Total Inventory Value before applying 15% discount: $', store.getInventoryValue());
+
+
