@@ -81,3 +81,13 @@ const pop = new ProductProperties('MtnDew', 3, 40);
 const energyDrink = new ProductProperties('Monster', 4, 30);
 const brownies = new PerishableProductProperties('Brownies', 2.5, 60, 'Dec-18th');
 const orangeJuice = new PerishableProductProperties('Orange Juice', 5, 15, 'Dec-25');
+
+
+// create store object and add products to store.
+const store = new Store();
+
+store.addProduct(apple);
+store.addProduct(pop);
+store.addProduct(energyDrink);
+store.addProduct(brownies);
+store.addProduct(orangeJuice);
